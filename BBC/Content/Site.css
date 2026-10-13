@@ -1,0 +1,3566 @@
+﻿html,
+body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Times New Roman", Times, serif !important;
+    color: #26352b;
+    background: #f5f8f4;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: "Times New Roman", Times, serif !important;
+}
+
+.site-header,
+.navbar-dongthap {
+    width: 100%;
+}
+
+.site-header {
+    position: relative;
+    z-index: 1000;
+}
+
+/* ===== THANH HEADER XANH ===== */
+.navbar-dongthap {
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+    min-height: 80px;
+    background: #176b45 !important;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    width: 100%;
+    max-width: 1488px;
+    min-height: 80px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+
+.nav-brand {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    color: #ffffff !important;
+    font-family: "Times New Roman", Times, serif !important;
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    text-decoration: none !important;
+    text-transform: uppercase;
+}
+
+.nav-brand:hover {
+    color: #f5df91 !important;
+}
+
+
+/* ===== MENU CHÍNH NẰM TRÊN MỘT HÀNG ===== */
+.nav-menu {
+    display: flex !important;
+    flex: 1 1 auto;
+    flex-direction: row !important;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 2px;
+    min-width: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+}
+
+    .nav-menu > li {
+        position: relative;
+        display: block;
+        flex: 0 0 auto;
+        margin: 0 !important;
+        padding: 0 !important;
+        list-style: none !important;
+    }
+
+        .nav-menu > li > a,
+        .nav-menu > li > .menu-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            min-height: 80px;
+            margin: 0;
+            padding: 0 13px;
+            border: 0;
+            border-radius: 0;
+            color: #fff !important;
+            background: transparent;
+            font-family: "Times New Roman", Times, serif !important;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 1.3;
+            white-space: nowrap;
+            text-decoration: none !important;
+            cursor: pointer;
+        }
+
+            .nav-menu > li > a:hover,
+            .nav-menu > li > .menu-button:hover,
+            .nav-menu > li.submenu-open > .menu-button {
+                color: #f5df91 !important;
+                background: rgba(255, 255, 255, 0.09);
+            }
+
+.arrow {
+    font-size: 12px;
+}
+
+/* ===== MENU CON: ẨN MẶC ĐỊNH, HIỆN KHI BẤM ===== */
+.nav-menu .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 2000;
+    width: 265px;
+    margin: 0 !important;
+    padding: 8px 0 !important;
+    list-style: none !important;
+    background: #fff;
+    border-top: 3px solid #d8b85a;
+    border-radius: 0 0 7px 7px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+.nav-menu .has-submenu.submenu-open > .submenu {
+    display: block !important;
+}
+
+.nav-menu .submenu li {
+    display: block;
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+}
+
+.nav-menu .submenu .submenu-heading {
+    padding: 12px 18px;
+    color: #176b45;
+    font-family: "Times New Roman", Times, serif !important;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+    border-bottom: 1px solid #e8eee8;
+}
+
+.nav-menu .submenu li a {
+    display: block;
+    padding: 11px 18px;
+    color: #34483a !important;
+    background: #fff;
+    font-family: "Times New Roman", Times, serif !important;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    white-space: normal;
+    text-decoration: none !important;
+}
+
+    .nav-menu .submenu li a:hover {
+        color: #176b45 !important;
+        background: #edf6ee;
+    }
+
+.nav-menu .submenu-right {
+    right: 0;
+    left: auto;
+}
+
+/* ===== NÚT MENU TRÊN ĐIỆN THOẠI ===== */
+.nav-toggle {
+    display: none;
+    padding: 5px 11px;
+    color: #fff;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: 5px;
+    font-family: "Times New Roman", Times, serif !important;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* ===== BANNER GIỚI THIỆU VÀ BÉ SEN ===== */
+.hero-dongthap {
+    width: 100%;
+    background: linear-gradient(135deg, #e8f3e9, #f8fbf6);
+    border-bottom: 1px solid #dce8dc;
+}
+
+.hero-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    width: 100%;
+    max-width: 1488px;
+    min-height: 350px;
+    margin: 0 auto;
+    padding: 25px 7%;
+}
+
+.hero-text {
+    flex: 1 1 auto;
+    min-width: 0;
+    text-align: left;
+}
+
+    .hero-text h1 {
+        margin: 0 0 18px;
+        color: #176b45;
+        font-family: "Times New Roman", Times, serif !important;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 1.3;
+    }
+
+    .hero-text p {
+        max-width: 620px;
+        margin: 0;
+        color: #34483a;
+        font-family: "Times New Roman", Times, serif !important;
+        font-size: 20px;
+        line-height: 1.8;
+    }
+
+.hero-mascot {
+    display: flex;
+    flex: 0 0 340px;
+    align-items: center;
+    justify-content: center;
+    width: 340px;
+}
+
+    .hero-mascot img {
+        display: block;
+        width: 100%;
+        max-width: 340px;
+        height: 280px;
+        object-fit: contain;
+        object-position: center;
+    }
+
+/* ===== KHU VỰC NỘI DUNG ===== */
+.page-content {
+    width: 100%;
+    max-width: 1488px;
+    margin: 0 auto;
+    padding: 20px 4%;
+}
+
+.home-intro {
+    padding: 12px 0;
+    text-align: center;
+}
+
+    .home-intro h2 {
+        margin-bottom: 10px;
+        font-family: "Times New Roman", Times, serif !important;
+    }
+
+    .home-intro p {
+        font-family: "Times New Roman", Times, serif !important;
+        font-size: 18px;
+    }
+
+/* ===== SLIDESHOW ẢNH ===== */
+.slideshow {
+    width: 100%;
+    max-width: 1400px;
+    height: 470px;
+    margin: 20px auto 30px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #e8eee8;
+}
+
+    .slideshow img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+/* ===== CÁC THẺ DANH MỤC ===== */
+.home-categories {
+    max-width: 1400px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+    .home-categories .card {
+        height: 100%;
+        border: 1px solid #e0e8e0;
+        border-radius: 10px;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+        .home-categories .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+        }
+
+    .home-categories .card-title {
+        color: #176b45;
+        font-family: "Times New Roman", Times, serif !important;
+        font-weight: 700;
+    }
+
+    .home-categories .card-text {
+        font-family: "Times New Roman", Times, serif !important;
+        font-size: 17px;
+        line-height: 1.7;
+    }
+
+    .home-categories .btn {
+        font-family: "Times New Roman", Times, serif !important;
+        font-size: 16px;
+    }
+
+/* ===== CHÂN TRANG ===== */
+.footer-dongthap {
+    margin-top: 35px;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    background: #145638;
+    font-family: "Times New Roman", Times, serif !important;
+}
+
+    .footer-dongthap p {
+        margin: 0;
+    }
+
+/* ===== TABLET VÀ ĐIỆN THOẠI ===== */
+@media (max-width: 900px) {
+    .nav-container {
+        min-height: 70px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 10px 20px;
+    }
+
+    .nav-brand {
+        font-size: 24px;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none !important;
+        flex: 0 0 100%;
+        flex-direction: column !important;
+        align-items: stretch;
+        gap: 0;
+        width: 100%;
+    }
+
+        .nav-menu.menu-open {
+            display: flex !important;
+        }
+
+        .nav-menu > li {
+            width: 100%;
+        }
+
+            .nav-menu > li > a,
+            .nav-menu > li > .menu-button {
+                justify-content: space-between;
+                width: 100%;
+                min-height: 46px;
+                padding: 10px 12px;
+                border-top: 1px solid rgba(255, 255, 255, 0.15);
+                font-size: 17px;
+            }
+
+        .nav-menu .submenu {
+            position: static;
+            width: 100%;
+            border-radius: 0;
+            box-shadow: none;
+        }
+
+        .nav-menu .submenu-right {
+            right: auto;
+            left: auto;
+        }
+
+    .hero-inner {
+        min-height: auto;
+        flex-direction: column;
+        gap: 15px;
+        padding: 30px 20px;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+        .hero-text h1 {
+            font-size: 30px;
+        }
+
+        .hero-text p {
+            font-size: 17px;
+        }
+
+    .hero-mascot {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+        .hero-mascot img {
+            max-width: 280px;
+            height: 220px;
+        }
+
+    .slideshow {
+        height: 260px;
+    }
+}
+
+@media (max-width: 420px) {
+    .hero-text h1 {
+        font-size: 25px;
+    }
+
+    .hero-mascot img {
+        max-width: 240px;
+        height: 200px;
+    }
+
+    .slideshow {
+        height: 220px;
+    }
+}
+
+
+/* ===== GIAO DIỆN CHUNG CÁC TRANG DU LỊCH ===== */
+.tour-page {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 25px 20px 45px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.tour-heading {
+    margin: 10px 0 30px;
+    text-align: center;
+}
+
+.tour-label {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #b18b35;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.tour-heading h1 {
+    margin: 0 0 12px;
+    color: #176b45;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.tour-heading p {
+    max-width: 760px;
+    margin: 0 auto;
+    color: #56645a;
+    font-size: 19px;
+    line-height: 1.7;
+}
+
+.tour-feature {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 25px 0 40px;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0,0,0,.08);
+}
+
+    .tour-feature > img {
+        display: block;
+        width: 50%;
+        height: 320px;
+        object-fit: cover;
+    }
+
+.tour-feature-text {
+    flex: 1;
+    padding: 25px;
+}
+
+    .tour-feature-text h2 {
+        color: #176b45;
+        font-size: 27px;
+        font-weight: bold;
+    }
+
+    .tour-feature-text p {
+        color: #435247;
+        font-size: 18px;
+        line-height: 1.8;
+    }
+
+.tour-section-title {
+    margin: 35px 0 22px;
+    padding-left: 14px;
+    color: #176b45;
+    font-size: 27px;
+    font-weight: bold;
+    border-left: 5px solid #d8b85a;
+}
+
+.tour-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.tour-card {
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #e1e9e1;
+    border-radius: 10px;
+    box-shadow: 0 4px 14px rgba(0,0,0,.06);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+    .tour-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 22px rgba(0,0,0,.12);
+    }
+
+    .tour-card > img {
+        display: block;
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+    }
+
+.tour-card-body {
+    padding: 20px;
+}
+
+    .tour-card-body h3 {
+        margin: 0 0 12px;
+        color: #176b45;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .tour-card-body p {
+        margin: 0;
+        color: #4e5c51;
+        font-size: 17px;
+        line-height: 1.7;
+    }
+
+/* ===== LỊCH TRÌNH ===== */
+.itinerary-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.itinerary-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 22px;
+    padding: 22px;
+    background: #fff;
+    border-left: 5px solid #176b45;
+    border-radius: 8px;
+    box-shadow: 0 3px 12px rgba(0,0,0,.06);
+}
+
+.itinerary-time {
+    flex: 0 0 150px;
+    color: #176b45;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.itinerary-content h3 {
+    margin: 0 0 8px;
+    color: #176b45;
+    font-size: 22px;
+}
+
+.itinerary-content p {
+    margin: 0;
+    color: #4e5c51;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.tour-note {
+    margin-top: 28px;
+    padding: 22px;
+    background: #e8f3e9;
+    border-radius: 8px;
+}
+
+    .tour-note h3 {
+        margin-top: 0;
+        color: #176b45;
+        font-size: 22px;
+    }
+
+    .tour-note p {
+        margin-bottom: 0;
+        font-size: 17px;
+        line-height: 1.7;
+    }
+
+/* ===== MÀN HÌNH NHỎ ===== */
+@media (max-width: 768px) {
+    .tour-page {
+        padding: 20px 14px 35px;
+    }
+
+    .tour-heading h1 {
+        font-size: 28px;
+    }
+
+    .tour-heading p {
+        font-size: 17px;
+    }
+
+    .tour-feature {
+        flex-direction: column;
+        gap: 0;
+    }
+
+        .tour-feature > img {
+            width: 100%;
+            height: 230px;
+        }
+
+    .tour-feature-text {
+        padding: 20px;
+    }
+
+    .tour-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tour-card > img {
+        height: 230px;
+    }
+
+    .itinerary-item {
+        flex-direction: column;
+        gap: 8px;
+        padding: 18px;
+    }
+
+    .itinerary-time {
+        flex-basis: auto;
+    }
+}
+
+/* ===== TRANG DIEM DEN NOI BAT ===== */
+.destination-banner {
+    position: relative;
+    width: 100%;
+    height: 420px;
+    margin: 25px 0 40px;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #176b45;
+}
+
+.destination-banner > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.destination-banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient( 90deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.05) );
+}
+
+.destination-banner-text {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 5%;
+    max-width: 570px;
+    transform: translateY(-50%);
+    color: #fff;
+}
+
+    .destination-banner-text h2 {
+        margin-bottom: 15px;
+        font-family: "Times New Roman", Times, serif;
+        font-size: 38px;
+        font-weight: bold;
+    }
+
+    .destination-banner-text p {
+        font-size: 20px;
+        line-height: 1.7;
+    }
+
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    margin: 25px 0 40px;
+}
+
+.destination-card {
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #e1e9e1;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+    .destination-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 9px 22px rgba(0, 0, 0, 0.12);
+    }
+
+    .destination-card > img {
+        display: block;
+        width: 100%;
+        height: 230px;
+        object-fit: cover;
+    }
+
+.destination-card-body {
+    padding: 22px;
+}
+
+.destination-number {
+    color: #b18b35;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.destination-card-body h3 {
+    margin: 12px 0;
+    color: #176b45;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.destination-card-body p {
+    margin: 0;
+    color: #4e5c51;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.destination-note {
+    margin-top: 35px;
+    padding: 30px 20px;
+    text-align: center;
+    background: #e8f3e9;
+    border-radius: 10px;
+}
+
+    .destination-note h2 {
+        color: #176b45;
+        font-size: 27px;
+        font-weight: bold;
+    }
+
+    .destination-note p {
+        font-size: 18px;
+        line-height: 1.7;
+    }
+
+.destination-button {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 12px 24px;
+    color: #fff !important;
+    background: #176b45;
+    border-radius: 6px;
+    font-size: 17px;
+    text-decoration: none !important;
+}
+
+    .destination-button:hover {
+        color: #fff !important;
+        background: #105337;
+    }
+
+@media (max-width: 768px) {
+    .destination-banner {
+        height: 300px;
+    }
+
+    .destination-banner-text h2 {
+        font-size: 28px;
+    }
+
+    .destination-banner-text p {
+        font-size: 16px;
+    }
+
+    .destination-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .destination-card > img {
+        height: 240px;
+    }
+}
+/* ===== TRANG DU LỊCH SINH THÁI ===== */
+.sinhthai-page {
+    width: 100%;
+    color: #294334;
+}
+
+/* Phần giới thiệu */
+.eco-intro {
+    max-width: 950px;
+    margin: 55px auto 45px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+    .eco-intro h2 {
+        margin: 14px 0;
+        color: #176b45;
+        font-size: 30px;
+        font-weight: 700;
+    }
+
+    .eco-intro p {
+        color: #647368;
+        font-size: 16px;
+        line-height: 1.9;
+    }
+
+/* Tiêu đề danh sách */
+.sinhthai-page .tour-section-title {
+    margin: 45px 0 28px;
+    color: #176b45;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+/* Lưới địa điểm */
+.sinhthai-page .destination-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 26px;
+    margin-bottom: 55px;
+}
+
+/* Thẻ địa điểm */
+.sinhthai-page .destination-card {
+    overflow: hidden;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 5px 22px rgba(23, 70, 43, 0.10);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .sinhthai-page .destination-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 28px rgba(23, 70, 43, 0.16);
+    }
+
+    /* Ảnh trong thẻ */
+    .sinhthai-page .destination-card > img {
+        display: block;
+        width: 100%;
+        height: 235px;
+        object-fit: cover;
+    }
+
+/* Nội dung thẻ */
+.sinhthai-page .destination-card-body {
+    padding: 23px;
+}
+
+.sinhthai-page .destination-number {
+    color: #39845a;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+}
+
+.sinhthai-page .destination-card-body h3 {
+    margin: 12px 0;
+    color: #176b45;
+    font-size: 21px;
+    line-height: 1.45;
+}
+
+.sinhthai-page .destination-card-body p {
+    margin-bottom: 0;
+    color: #647368;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* Khu vực hoạt động */
+.eco-activities {
+    margin: 55px 0;
+    padding: 45px 25px;
+    background: #f1f7ef;
+    border-radius: 16px;
+}
+
+    .eco-activities > h2 {
+        margin: 0 0 32px;
+        color: #176b45;
+        text-align: center;
+        font-size: 28px;
+        font-weight: 700;
+    }
+
+.eco-activity-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.eco-activity {
+    padding: 25px 20px;
+    text-align: center;
+    background: #fff;
+    border-radius: 12px;
+}
+
+.eco-icon {
+    display: block;
+    margin-bottom: 14px;
+    font-size: 38px;
+}
+
+.eco-activity h3 {
+    color: #176b45;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.eco-activity p {
+    margin: 10px 0 0;
+    color: #647368;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* Điện thoại và máy tính bảng */
+@media (max-width: 900px) {
+    .sinhthai-page .destination-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .eco-activity-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .sinhthai-page .destination-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .sinhthai-page .tour-section-title,
+    .eco-intro h2 {
+        font-size: 25px;
+    }
+
+    .sinhthai-page .destination-card > img {
+        height: 220px;
+    }
+
+    .eco-activities {
+        padding: 30px 15px;
+    }
+}
+/* ===== TRANG DI TÍCH VĂN HÓA ===== */
+.ditich-page {
+    width: 100%;
+    color: #35483c;
+}
+
+/* Phần giới thiệu */
+.culture-intro {
+    max-width: 950px;
+    margin: 55px auto 45px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+    .culture-intro h2 {
+        margin: 14px 0;
+        color: #176b45;
+        font-size: 30px;
+        font-weight: 700;
+    }
+
+    .culture-intro p {
+        color: #647368;
+        font-size: 16px;
+        line-height: 1.9;
+    }
+
+/* Tiêu đề danh sách */
+.ditich-page .tour-section-title {
+    margin: 45px 0 28px;
+    color: #176b45;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+/* Lưới di tích */
+.ditich-page .destination-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 26px;
+    margin-bottom: 55px;
+}
+
+/* Thẻ di tích */
+.ditich-page .destination-card {
+    overflow: hidden;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 5px 22px rgba(23, 70, 43, 0.10);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .ditich-page .destination-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 28px rgba(23, 70, 43, 0.16);
+    }
+
+    /* Ảnh */
+    .ditich-page .destination-card > img {
+        display: block;
+        width: 100%;
+        height: 235px;
+        object-fit: cover;
+    }
+
+/* Nội dung */
+.ditich-page .destination-card-body {
+    padding: 23px;
+}
+
+.ditich-page .destination-number {
+    color: #39845a;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+}
+
+.ditich-page .destination-card-body h3 {
+    margin: 12px 0;
+    color: #176b45;
+    font-size: 21px;
+    line-height: 1.45;
+}
+
+.ditich-page .destination-card-body p {
+    margin-bottom: 0;
+    color: #647368;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* Giá trị văn hóa */
+.culture-values {
+    margin: 55px 0;
+    padding: 45px 25px;
+    background: #f1f7ef;
+    border-radius: 16px;
+}
+
+    .culture-values > h2 {
+        margin: 0 0 32px;
+        color: #176b45;
+        text-align: center;
+        font-size: 28px;
+        font-weight: 700;
+    }
+
+.culture-values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.culture-value {
+    padding: 25px 20px;
+    text-align: center;
+    background: #fff;
+    border-radius: 12px;
+}
+
+.culture-icon {
+    display: block;
+    margin-bottom: 14px;
+    font-size: 38px;
+}
+
+.culture-value h3 {
+    color: #176b45;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.culture-value p {
+    margin: 10px 0 0;
+    color: #647368;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* Máy tính bảng */
+@media (max-width: 900px) {
+    .ditich-page .destination-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .culture-values-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Điện thoại */
+@media (max-width: 600px) {
+    .ditich-page .destination-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ditich-page .tour-section-title,
+    .culture-intro h2 {
+        font-size: 25px;
+    }
+
+    .ditich-page .destination-card > img {
+        height: 220px;
+    }
+
+    .culture-values {
+        padding: 30px 15px;
+    }
+}
+/* ==============================
+   TRANG GOI Y LICH TRINH
+   ============================== */
+.itinerary-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px 55px;
+    color: #26372c;
+}
+
+.itinerary-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.itinerary-eyebrow,
+.itinerary-section-heading > span,
+.itinerary-extra-content > span {
+    color: #398253;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.itinerary-heading h1 {
+    color: #176b45;
+    font-size: 38px;
+    font-weight: 800;
+    margin: 12px 0;
+}
+
+.itinerary-heading p {
+    max-width: 760px;
+    margin: 0 auto;
+    color: #68736a;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* BANNER */
+
+.itinerary-banner {
+    position: relative;
+    height: 390px;
+    overflow: hidden;
+    border-radius: 16px;
+    margin-bottom: 55px;
+    background: #dce9df;
+}
+
+    .itinerary-banner > img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+    }
+
+    .itinerary-banner::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient( 90deg, rgba(10, 40, 25, 0.82), rgba(10, 40, 25, 0.25) 75% );
+    }
+
+.itinerary-banner-overlay {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 45px;
+    right: 25px;
+    transform: translateY(-50%);
+    max-width: 650px;
+    color: #fff;
+}
+
+    .itinerary-banner-overlay > span {
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
+
+    .itinerary-banner-overlay h2 {
+        font-size: 38px;
+        line-height: 1.3;
+        font-weight: 800;
+        margin: 14px 0;
+        color: #fff;
+    }
+
+    .itinerary-banner-overlay p {
+        font-size: 15px;
+        line-height: 1.8;
+        color: #fff;
+    }
+
+.itinerary-banner-button {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 12px 22px;
+    border-radius: 6px;
+    background: #fff;
+    color: #176b45 !important;
+    text-decoration: none !important;
+    font-weight: 700;
+    transition: background 0.2s, color 0.2s;
+}
+
+    .itinerary-banner-button:hover {
+        background: #176b45;
+        color: #fff !important;
+    }
+
+/* TIÊU ĐỀ KHU VỰC */
+
+.itinerary-section {
+    margin-bottom: 60px;
+    scroll-margin-top: 25px;
+}
+
+.itinerary-section-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+    .itinerary-section-heading h2 {
+        color: #176b45;
+        font-size: 29px;
+        line-height: 1.4;
+        font-weight: 800;
+        margin: 12px 0;
+    }
+
+    .itinerary-section-heading p {
+        color: #6b756d;
+        line-height: 1.8;
+    }
+
+/* THẺ LỊCH TRÌNH */
+
+.itinerary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    align-items: stretch;
+}
+
+.itinerary-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid #e4ebe5;
+    border-radius: 13px;
+    background: #fff;
+    box-shadow: 0 5px 20px rgba(22, 65, 39, 0.07);
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+    .itinerary-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 28px rgba(22, 65, 39, 0.13);
+    }
+
+.itinerary-image-wrap {
+    height: 225px;
+    position: relative;
+    overflow: hidden;
+    background: #edf2ed;
+}
+
+    .itinerary-image-wrap img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s;
+    }
+
+.itinerary-card:hover .itinerary-image-wrap img {
+    transform: scale(1.04);
+}
+
+.itinerary-duration {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    padding: 7px 12px;
+    background: #fff;
+    color: #176b45;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.itinerary-card-body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 22px;
+}
+
+.itinerary-category {
+    color: #398253;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.itinerary-card-body h3 {
+    color: #244c35;
+    font-size: 21px;
+    font-weight: 800;
+    line-height: 1.4;
+    margin: 12px 0;
+}
+
+.itinerary-card-body > p {
+    color: #68736a;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+.itinerary-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-bottom: 22px;
+}
+
+    .itinerary-highlights span {
+        padding: 6px 9px;
+        border-radius: 5px;
+        background: #eff6f0;
+        color: #42654d;
+        font-size: 11px;
+    }
+
+.itinerary-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: auto;
+    padding: 12px 15px;
+    border-radius: 6px;
+    background: #176b45;
+    color: #fff !important;
+    text-decoration: none !important;
+    font-size: 14px;
+    font-weight: 700;
+    transition: background 0.2s;
+}
+
+    .itinerary-button:hover {
+        background: #105536;
+    }
+
+    .itinerary-button span {
+        font-size: 19px;
+    }
+
+/* CHI TIẾT LỊCH TRÌNH */
+
+.itinerary-detail-section {
+    margin-top: 60px;
+}
+
+.itinerary-detail {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 30px;
+    align-items: start;
+    padding: 25px;
+    margin-bottom: 25px;
+    border: 1px solid #e4ebe5;
+    border-radius: 13px;
+    background: #fff;
+    box-shadow: 0 5px 18px rgba(22, 65, 39, 0.05);
+    scroll-margin-top: 25px;
+}
+
+.itinerary-detail-image {
+    height: 100%;
+    min-height: 300px;
+    overflow: hidden;
+    border-radius: 9px;
+    background: #edf2ed;
+}
+
+    .itinerary-detail-image img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        min-height: 300px;
+        object-fit: cover;
+    }
+
+.itinerary-detail-label {
+    color: #398253;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.itinerary-detail-content h3 {
+    color: #176b45;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.4;
+    margin: 12px 0 20px;
+}
+
+.itinerary-timeline {
+    border-left: 2px solid #cfe4d3;
+    padding-left: 18px;
+}
+
+.itinerary-time-item {
+    position: relative;
+    padding-bottom: 17px;
+}
+
+    .itinerary-time-item:last-child {
+        padding-bottom: 0;
+    }
+
+    .itinerary-time-item::before {
+        content: "";
+        position: absolute;
+        left: -24px;
+        top: 4px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #398253;
+        border: 2px solid #fff;
+        box-shadow: 0 0 0 1px #398253;
+    }
+
+    .itinerary-time-item > span {
+        color: #176b45;
+        font-size: 13px;
+        font-weight: 800;
+    }
+
+    .itinerary-time-item p {
+        color: #68736a;
+        font-size: 14px;
+        line-height: 1.8;
+        margin: 5px 0 0;
+    }
+
+/* GỢI Ý MỞ RỘNG */
+
+.itinerary-extra {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+    margin-top: 55px;
+    padding: 25px;
+    border-radius: 13px;
+    background: #f0f6f0;
+}
+
+.itinerary-extra-image {
+    height: 290px;
+    overflow: hidden;
+    border-radius: 9px;
+    background: #dce9df;
+}
+
+    .itinerary-extra-image img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+    }
+
+.itinerary-extra-content h2 {
+    color: #176b45;
+    font-size: 27px;
+    line-height: 1.4;
+    margin: 12px 0;
+}
+
+.itinerary-extra-content p {
+    color: #5d6b60;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.itinerary-disclaimer {
+    margin-top: 25px;
+    color: #778078;
+    font-size: 12px;
+    line-height: 1.8;
+    font-style: italic;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .itinerary-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .itinerary-detail {
+        grid-template-columns: 1fr;
+    }
+
+    .itinerary-detail-image {
+        height: 280px;
+        min-height: 0;
+    }
+
+        .itinerary-detail-image img {
+            min-height: 0;
+        }
+}
+
+@media (max-width: 600px) {
+    .itinerary-page {
+        padding: 22px 12px 40px;
+    }
+
+    .itinerary-heading h1 {
+        font-size: 30px;
+    }
+
+    .itinerary-banner {
+        height: 330px;
+        border-radius: 10px;
+    }
+
+    .itinerary-banner-overlay {
+        left: 20px;
+        right: 15px;
+    }
+
+        .itinerary-banner-overlay h2 {
+            font-size: 27px;
+        }
+
+    .itinerary-section-heading h2 {
+        font-size: 24px;
+    }
+
+    .itinerary-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .itinerary-detail {
+        padding: 15px;
+        gap: 20px;
+    }
+
+    .itinerary-detail-content h3 {
+        font-size: 21px;
+    }
+
+    .itinerary-extra {
+        grid-template-columns: 1fr;
+        padding: 15px;
+        gap: 20px;
+    }
+
+    .itinerary-extra-image {
+        height: 220px;
+    }
+
+    .itinerary-extra-content h2 {
+        font-size: 23px;
+    }
+}
+/* =====================================
+   TRANG DAC SAN NOI TIENG DONG THAP
+   ===================================== */
+.specialty-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px 55px;
+    color: #29372d;
+}
+
+.specialty-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+    .specialty-heading > span,
+    .specialty-section-heading > span {
+        color: #398253;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 2px;
+    }
+
+    .specialty-heading h1 {
+        color: #176b45;
+        font-size: 38px;
+        line-height: 1.3;
+        font-weight: 800;
+        margin: 12px 0;
+    }
+
+    .specialty-heading p {
+        max-width: 760px;
+        margin: 0 auto;
+        color: #68736a;
+        font-size: 15px;
+        line-height: 1.9;
+    }
+
+/* BANNER */
+
+.specialty-banner {
+    position: relative;
+    height: 390px;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-bottom: 55px;
+    background: #dce9df;
+}
+
+    .specialty-banner > img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .specialty-banner::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient( 90deg, rgba(10, 40, 25, 0.84), rgba(10, 40, 25, 0.15) );
+    }
+
+.specialty-banner-overlay {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 42px;
+    right: 25px;
+    transform: translateY(-50%);
+    max-width: 650px;
+    color: #fff;
+}
+
+    .specialty-banner-overlay > span {
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 2px;
+    }
+
+    .specialty-banner-overlay h2 {
+        color: #fff;
+        font-size: 37px;
+        line-height: 1.35;
+        font-weight: 800;
+        margin: 13px 0;
+    }
+
+    .specialty-banner-overlay p {
+        max-width: 560px;
+        color: #fff;
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+.specialty-banner-button {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 12px 22px;
+    border-radius: 6px;
+    background: #fff;
+    color: #176b45 !important;
+    text-decoration: none !important;
+    font-weight: 700;
+    transition: background 0.2s;
+}
+
+    .specialty-banner-button:hover {
+        background: #e5f2e7;
+    }
+
+/* TIÊU ĐỀ KHU VỰC */
+
+.specialty-section {
+    margin-bottom: 60px;
+    scroll-margin-top: 25px;
+}
+
+.specialty-section-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+    .specialty-section-heading h2 {
+        color: #176b45;
+        font-size: 29px;
+        line-height: 1.45;
+        font-weight: 800;
+        margin: 12px 0;
+    }
+
+    .specialty-section-heading p {
+        color: #68736a;
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+/* LƯỚI ĐẶC SẢN */
+
+.specialty-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    align-items: stretch;
+}
+
+.specialty-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #e3ebe4;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(22, 65, 39, 0.07);
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+    .specialty-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 28px rgba(22, 65, 39, 0.13);
+    }
+
+.specialty-image {
+    position: relative;
+    height: 225px;
+    overflow: hidden;
+    background: #edf2ed;
+}
+
+    .specialty-image img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.35s;
+    }
+
+.specialty-card:hover .specialty-image img {
+    transform: scale(1.04);
+}
+
+.specialty-number {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #176b45;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.specialty-card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 21px;
+}
+
+.specialty-category {
+    color: #398253;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.specialty-card-body h3 {
+    color: #244c35;
+    font-size: 21px;
+    line-height: 1.4;
+    font-weight: 800;
+    margin: 11px 0;
+}
+
+.specialty-card-body p {
+    color: #68736a;
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 18px;
+}
+
+.specialty-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: auto;
+    padding-top: 13px;
+    border-top: 1px solid #e8eee9;
+    color: #176b45 !important;
+    text-decoration: none !important;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+    .specialty-link span {
+        font-size: 19px;
+        transition: transform 0.2s;
+    }
+
+    .specialty-link:hover span {
+        transform: translateX(4px);
+    }
+
+/* CHI TIẾT TỪNG MÓN */
+
+.specialty-detail-section {
+    margin-top: 65px;
+}
+
+.specialty-detail {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 30px;
+    align-items: center;
+    padding: 24px;
+    margin-bottom: 25px;
+    border: 1px solid #e3ebe4;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 4px 16px rgba(22, 65, 39, 0.05);
+    scroll-margin-top: 25px;
+}
+
+.specialty-detail-image {
+    height: 290px;
+    overflow: hidden;
+    border-radius: 9px;
+    background: #edf2ed;
+}
+
+    .specialty-detail-image img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+.specialty-detail-content > span {
+    color: #398253;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.specialty-detail-content h3 {
+    color: #176b45;
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 1.4;
+    margin: 12px 0;
+}
+
+.specialty-detail-content p {
+    color: #5f6c62;
+    font-size: 14px;
+    line-height: 1.95;
+    margin-bottom: 12px;
+}
+
+.specialty-detail-content strong {
+    color: #244c35;
+}
+
+/* LỜI KẾT */
+
+.specialty-footer {
+    margin-top: 55px;
+    padding: 40px 25px;
+    text-align: center;
+    border-radius: 12px;
+    background: #edf5ee;
+}
+
+    .specialty-footer > span {
+        color: #398253;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 2px;
+    }
+
+    .specialty-footer h2 {
+        color: #176b45;
+        font-size: 27px;
+        line-height: 1.5;
+        font-weight: 800;
+        margin: 12px 0;
+    }
+
+    .specialty-footer p {
+        max-width: 700px;
+        margin: 0 auto;
+        color: #5f6c62;
+        font-size: 14px;
+        line-height: 1.9;
+    }
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .specialty-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .specialty-detail {
+        grid-template-columns: 1fr;
+    }
+
+    .specialty-detail-image {
+        height: 280px;
+    }
+}
+
+@media (max-width: 600px) {
+    .specialty-page {
+        padding: 22px 12px 40px;
+    }
+
+    .specialty-heading h1 {
+        font-size: 29px;
+    }
+
+    .specialty-banner {
+        height: 330px;
+        border-radius: 10px;
+    }
+
+    .specialty-banner-overlay {
+        left: 20px;
+        right: 15px;
+    }
+
+        .specialty-banner-overlay h2 {
+            font-size: 27px;
+        }
+
+    .specialty-section-heading h2 {
+        font-size: 24px;
+    }
+
+    .specialty-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .specialty-detail {
+        padding: 15px;
+        gap: 20px;
+    }
+
+    .specialty-detail-image {
+        height: 220px;
+    }
+
+    .specialty-detail-content h3 {
+        font-size: 22px;
+    }
+
+    .specialty-footer {
+        padding: 30px 16px;
+    }
+
+        .specialty-footer h2 {
+            font-size: 23px;
+        }
+}
+/* ===== AM THUC DIA PHUONG ===== */
+.local-food-page {
+    color: #294438;
+    background: #fff;
+    font-family: inherit;
+}
+
+/* Banner */
+.food-hero {
+    position: relative;
+    height: 430px;
+    overflow: hidden;
+    background: #174d35;
+}
+
+    .food-hero > img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .food-hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient( 90deg, rgba(9, 43, 28, 0.86), rgba(9, 43, 28, 0.42), rgba(9, 43, 28, 0.05) );
+    }
+
+.food-hero-overlay {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 8%;
+    right: 8%;
+    transform: translateY(-50%);
+    max-width: 750px;
+    color: #fff;
+}
+
+    .food-hero-overlay > span {
+        display: inline-block;
+        color: #e9d98d;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 3px;
+        margin-bottom: 14px;
+    }
+
+    .food-hero-overlay h1 {
+        margin: 0 0 18px;
+        font-size: clamp(32px, 5vw, 56px);
+        line-height: 1.15;
+        font-weight: 800;
+    }
+
+    .food-hero-overlay p {
+        max-width: 600px;
+        margin: 0;
+        font-size: 18px;
+        line-height: 1.8;
+    }
+
+/* Giới thiệu */
+.food-intro {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 70px 24px 55px;
+    text-align: center;
+}
+
+.food-label {
+    display: inline-block;
+    color: #248052;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.food-intro h2,
+.food-section-heading h2 {
+    margin: 12px 0 20px;
+    color: #185c3d;
+    font-size: clamp(26px, 3vw, 36px);
+    font-weight: 800;
+}
+
+.food-intro p {
+    margin: 0 auto;
+    max-width: 850px;
+    color: #65736a;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+/* Danh sách món ăn */
+.food-section {
+    padding: 55px 6% 75px;
+    background: #f5f8f3;
+}
+
+.food-section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 32px;
+}
+
+    .food-section-heading h2 {
+        margin-bottom: 0;
+    }
+
+    .food-section-heading > p {
+        max-width: 330px;
+        margin: 0 0 4px;
+        color: #69766e;
+        line-height: 1.7;
+    }
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.food-card {
+    min-width: 0;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 22px rgba(24, 75, 48, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+    .food-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 28px rgba(24, 75, 48, 0.15);
+    }
+
+.food-image {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+    background: #e3eae2;
+}
+
+    .food-image img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.35s ease;
+    }
+
+.food-card:hover .food-image img {
+    transform: scale(1.06);
+}
+
+.food-number {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #176b45;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.food-card-body {
+    padding: 23px 20px 25px;
+}
+
+.food-category {
+    color: #248052;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.food-card-body h3 {
+    margin: 10px 0 12px;
+    color: #194d35;
+    font-size: 21px;
+    line-height: 1.35;
+    font-weight: 800;
+}
+
+.food-card-body p {
+    margin: 0;
+    color: #68746c;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* Phần kết */
+.food-discover {
+    position: relative;
+    margin: 65px 6%;
+    padding: 55px 7%;
+    overflow: hidden;
+    border-radius: 14px;
+    background: linear-gradient(120deg, #145b3b, #2c8757);
+    color: #fff;
+}
+
+.food-discover-content {
+    max-width: 780px;
+}
+
+.food-discover .food-label {
+    color: #e9d98d;
+}
+
+.food-discover h2 {
+    margin: 14px 0;
+    font-size: clamp(25px, 3vw, 36px);
+    line-height: 1.3;
+    font-weight: 800;
+}
+
+.food-discover p {
+    margin: 0;
+    color: #edf5ef;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+    .food-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .food-image {
+        height: 250px;
+    }
+}
+
+@media (max-width: 600px) {
+    .food-hero {
+        height: 330px;
+    }
+
+    .food-hero-overlay {
+        left: 6%;
+        right: 6%;
+    }
+
+        .food-hero-overlay p {
+            font-size: 15px;
+        }
+
+    .food-intro {
+        padding: 45px 20px;
+    }
+
+    .food-section {
+        padding: 40px 18px 50px;
+    }
+
+    .food-section-heading {
+        display: block;
+    }
+
+        .food-section-heading > p {
+            margin-top: 14px;
+        }
+
+    .food-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .food-image {
+        height: 240px;
+    }
+
+    .food-discover {
+        margin: 40px 18px;
+        padding: 35px 25px;
+    }
+}
+/* ===== TRANG SAN PHAM TU SEN ===== */
+.lotus-page {
+    color: #294438;
+    background: #fff;
+    font-family: inherit;
+}
+
+.lotus-intro {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 55px 24px 45px;
+    text-align: center;
+}
+
+.lotus-label {
+    color: #248052;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.lotus-intro h1 {
+    margin: 14px 0;
+    color: #185c3d;
+    font-size: 36px;
+    font-weight: 800;
+}
+
+.lotus-intro p {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #65736a;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+/* Banner riêng của trang */
+.lotus-banner {
+    position: relative;
+    height: 340px;
+    overflow: hidden;
+    background: #174d35;
+}
+
+    .lotus-banner > img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .lotus-banner::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient( 90deg, rgba(10, 48, 31, 0.85), rgba(10, 48, 31, 0.12) );
+    }
+
+.lotus-banner-content {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 8%;
+    right: 8%;
+    transform: translateY(-50%);
+    max-width: 650px;
+    color: #fff;
+}
+
+    .lotus-banner-content > span {
+        color: #e9d98d;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
+
+    .lotus-banner-content h2 {
+        margin: 14px 0;
+        color: #fff;
+        font-size: clamp(28px, 4vw, 44px);
+        line-height: 1.2;
+        font-weight: 800;
+    }
+
+    .lotus-banner-content p {
+        max-width: 550px;
+        margin: 0;
+        color: #fff;
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+/* Khu vực sản phẩm */
+.lotus-products {
+    padding: 65px 6%;
+    background: #f5f8f3;
+}
+
+.lotus-heading {
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+    .lotus-heading h2 {
+        margin: 12px 0;
+        color: #185c3d;
+        font-size: 32px;
+        font-weight: 800;
+    }
+
+    .lotus-heading p {
+        max-width: 650px;
+        margin: 0 auto;
+        color: #65736a;
+        line-height: 1.8;
+    }
+
+.lotus-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.lotus-card {
+    min-width: 0;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(24, 75, 48, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+    .lotus-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 25px rgba(24, 75, 48, 0.14);
+    }
+
+.lotus-image {
+    position: relative;
+    height: 235px;
+    overflow: hidden;
+    background: #e4ece3;
+}
+
+    .lotus-image img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.35s ease;
+    }
+
+.lotus-card:hover .lotus-image img {
+    transform: scale(1.05);
+}
+
+.lotus-tag {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #176b45;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.lotus-card-content {
+    padding: 22px;
+}
+
+.lotus-category {
+    color: #248052;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.lotus-card-content h3 {
+    margin: 10px 0 12px;
+    color: #185c3d;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.lotus-card-content p {
+    margin: 0;
+    color: #65736a;
+    font-size: 14px;
+    line-height: 1.85;
+}
+
+/* Phần cuối trang */
+.lotus-message {
+    margin: 60px 6%;
+    padding: 45px 7%;
+    border-radius: 12px;
+    background: linear-gradient(120deg, #145b3b, #2c8757);
+    color: #fff;
+}
+
+    .lotus-message > span {
+        color: #e9d98d;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
+
+    .lotus-message h2 {
+        margin: 14px 0;
+        color: #fff;
+        font-size: 32px;
+        line-height: 1.35;
+        font-weight: 800;
+    }
+
+    .lotus-message p {
+        max-width: 780px;
+        margin: 0;
+        color: #edf5ef;
+        line-height: 1.9;
+    }
+
+/* Responsive */
+@media (max-width: 900px) {
+    .lotus-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .lotus-intro {
+        padding: 40px 20px;
+    }
+
+        .lotus-intro h1 {
+            font-size: 29px;
+        }
+
+    .lotus-banner {
+        height: 300px;
+    }
+
+    .lotus-banner-content {
+        left: 6%;
+        right: 6%;
+    }
+
+    .lotus-products {
+        padding: 45px 18px;
+    }
+
+    .lotus-heading h2 {
+        font-size: 27px;
+    }
+
+    .lotus-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .lotus-image {
+        height: 240px;
+    }
+
+    .lotus-message {
+        margin: 40px 18px;
+        padding: 30px 24px;
+    }
+
+        .lotus-message h2 {
+            font-size: 27px;
+        }
+}
+/* ===== TRANG QUA TANG VA LUU NIEM ===== */
+.souvenir-page {
+    color: #294438;
+    background: #fff;
+    font-family: inherit;
+}
+
+.souvenir-intro {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 55px 24px 45px;
+    text-align: center;
+}
+
+.souvenir-label {
+    color: #248052;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.souvenir-intro h1 {
+    margin: 14px 0;
+    color: #185c3d;
+    font-size: 36px;
+    font-weight: 800;
+}
+
+.souvenir-intro p {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #65736a;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+/* Banner */
+.souvenir-banner {
+    position: relative;
+    height: 340px;
+    overflow: hidden;
+    background: #174d35;
+}
+
+    .souvenir-banner > img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .souvenir-banner::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient( 90deg, rgba(10, 48, 31, 0.85), rgba(10, 48, 31, 0.12) );
+    }
+
+.souvenir-banner-content {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 8%;
+    right: 8%;
+    transform: translateY(-50%);
+    max-width: 680px;
+    color: #fff;
+}
+
+    .souvenir-banner-content > span {
+        color: #e9d98d;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
+
+    .souvenir-banner-content h2 {
+        margin: 14px 0;
+        color: #fff;
+        font-size: clamp(28px, 4vw, 42px);
+        font-weight: 800;
+        line-height: 1.25;
+    }
+
+    .souvenir-banner-content p {
+        margin: 0;
+        color: #fff;
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+/* Danh sách quà */
+.souvenir-products {
+    padding: 65px 6%;
+    background: #f5f8f3;
+}
+
+.souvenir-heading {
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+    .souvenir-heading h2 {
+        margin: 12px 0;
+        color: #185c3d;
+        font-size: 32px;
+        font-weight: 800;
+    }
+
+    .souvenir-heading p {
+        max-width: 650px;
+        margin: 0 auto;
+        color: #65736a;
+        line-height: 1.8;
+    }
+
+.souvenir-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.souvenir-card {
+    min-width: 0;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(24, 75, 48, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+    .souvenir-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 25px rgba(24, 75, 48, 0.14);
+    }
+
+.souvenir-image {
+    position: relative;
+    height: 235px;
+    overflow: hidden;
+    background: #e4ece3;
+}
+
+    .souvenir-image img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.35s ease;
+    }
+
+.souvenir-card:hover .souvenir-image img {
+    transform: scale(1.05);
+}
+
+.souvenir-number {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #176b45;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.souvenir-card-content {
+    padding: 22px;
+}
+
+.souvenir-category {
+    color: #248052;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.souvenir-card-content h3 {
+    margin: 10px 0 12px;
+    color: #185c3d;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.souvenir-card-content p {
+    margin: 0;
+    color: #65736a;
+    font-size: 14px;
+    line-height: 1.85;
+}
+
+/* Phần kết */
+.souvenir-message {
+    margin: 60px 6%;
+    padding: 45px 7%;
+    border-radius: 12px;
+    background: linear-gradient(120deg, #145b3b, #2c8757);
+    color: #fff;
+}
+
+    .souvenir-message > span {
+        color: #e9d98d;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
+
+    .souvenir-message h2 {
+        margin: 14px 0;
+        color: #fff;
+        font-size: 32px;
+        font-weight: 800;
+        line-height: 1.35;
+    }
+
+    .souvenir-message p {
+        max-width: 780px;
+        margin: 0;
+        color: #edf5ef;
+        line-height: 1.9;
+    }
+
+/* Responsive */
+@media (max-width: 900px) {
+    .souvenir-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .souvenir-intro {
+        padding: 40px 20px;
+    }
+
+        .souvenir-intro h1 {
+            font-size: 29px;
+        }
+
+    .souvenir-banner {
+        height: 300px;
+    }
+
+    .souvenir-banner-content {
+        left: 6%;
+        right: 6%;
+    }
+
+    .souvenir-products {
+        padding: 45px 18px;
+    }
+
+    .souvenir-heading h2 {
+        font-size: 27px;
+    }
+
+    .souvenir-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .souvenir-image {
+        height: 240px;
+    }
+
+    .souvenir-message {
+        margin: 40px 18px;
+        padding: 30px 24px;
+    }
+
+        .souvenir-message h2 {
+            font-size: 27px;
+        }
+}
+
+/* ===== THANH TÌM KIẾM TRÊN MENU ===== */
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+.search-menu-item {
+    margin-left: auto;
+    padding-left: 20px;
+    list-style: none;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    width: 240px;
+    height: 38px;
+    margin: 0;
+    background: #fff;
+    border: 1px solid #dce7df;
+    border-radius: 22px;
+    overflow: hidden;
+}
+
+    .search-box input {
+        flex: 1;
+        min-width: 0;
+        width: 100%;
+        height: 100%;
+        padding: 0 12px;
+        border: none;
+        outline: none;
+        box-shadow: none;
+        background: #fff;
+        color: #333;
+        font-size: 14px;
+    }
+
+        .search-box input:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+    .search-box button {
+        flex: 0 0 42px;
+        height: 100%;
+        padding: 0;
+        border: none;
+        background: #fff;
+        color: #176b45;
+        cursor: pointer;
+        font-size: 17px;
+    }
+
+        .search-box button:hover {
+            background: #eaf4ed;
+        }
+
+/* Màn hình nhỏ */
+@media (max-width: 768px) {
+    .search-menu-item {
+        margin-left: 0;
+        padding: 12px 15px;
+    }
+
+    .search-box {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* =====================================
+   HEADER ĐỒNG THÁP - CÂN ĐỐI GIAO DIỆN
+===================================== */
+
+.navbar-dongthap {
+    width: 100%;
+    background: #176b45;
+}
+
+.navbar-dongthap .nav-container {
+    width: 100%;
+    max-width: 1600px;
+    min-height: 86px;
+    margin: 0 auto;
+    padding: 12px 36px;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Logo bên trái */
+.navbar-dongthap .nav-brand {
+    flex-shrink: 0;
+    margin: 0;
+    color: #fff;
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 1.2;
+    text-decoration: none;
+    white-space: nowrap;
+    letter-spacing: 0.5px;
+}
+
+/* Danh sách menu */
+.navbar-dongthap .nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1;
+    min-width: 0;
+    gap: 6px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Các mục menu */
+.navbar-dongthap .nav-menu > li {
+    flex-shrink: 0;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+/* Liên kết và nút menu */
+.navbar-dongthap .nav-menu > li > a,
+.navbar-dongthap .nav-menu > li > .menu-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    min-height: 44px;
+    padding: 10px 13px;
+    border: none;
+    border-radius: 8px;
+
+    background: transparent;
+    color: #fff;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.3;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+
+    transition: background-color 0.2s ease;
+}
+
+.navbar-dongthap .nav-menu > li > a:hover,
+.navbar-dongthap .nav-menu > li > .menu-button:hover,
+.navbar-dongthap .nav-menu > li.submenu-open > .menu-button {
+    background: rgba(255, 255, 255, 0.14);
+}
+
+/* Mũi tên menu */
+.navbar-dongthap .arrow {
+    font-size: 12px;
+}
+
+
+/* Thanh tìm kiếm */
+.navbar-dongthap .nav-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
+}
+
+.navbar-dongthap .nav-menu {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    min-width: 0;
+    margin: 0;
+    padding-right: 0;
+}
+
+.navbar-dongthap .search-menu-item {
+    flex: 0 0 320px;
+    width: 320px;
+    margin-left: auto;
+    margin-right: 0;
+    padding-left: 16px;
+    padding-right: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.navbar-dongthap .search-box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 42px;
+    margin: 0;
+    padding: 4px;
+    box-sizing: border-box;
+    border: 1px solid #dce7df;
+    border-radius: 24px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.navbar-dongthap .search-box input {
+    flex: 1;
+    min-width: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0 12px;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background: transparent;
+    color: #26372e;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.navbar-dongthap .search-box input::placeholder {
+    color: #87928b;
+}
+
+.navbar-dongthap .search-box button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 34px;
+    width: 34px;
+    height: 32px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: #176b45;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.navbar-dongthap .search-box button:hover {
+    background: #105236;
+}
+
+/* Nút mở menu trên điện thoại */
+.navbar-dongthap .nav-toggle {
+    display: none;
+}
+
+/* Màn hình vừa: thu nhỏ thanh tìm kiếm */
+@media (max-width: 1200px) and (min-width: 769px) {
+    .navbar-dongthap .search-menu-item {
+        flex-basis: 240px;
+        width: 240px;
+        padding-left: 8px;
+    }
+}
+
+/* Điện thoại */
+@media (max-width: 768px) {
+    .navbar-dongthap .search-menu-item {
+        flex: 0 0 auto;
+        width: 100%;
+        margin: 8px 0 0;
+        padding: 12px 15px;
+    }
+
+    .navbar-dongthap .search-box {
+        width: 100%;
+    }
+}
+
+
+/* =====================================
+   BANNER GIỚI THIỆU
+===================================== */
+
+.hero-dongthap {
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero-dongthap .hero-inner {
+    width: 100%;
+    max-width: 1400px;
+    min-height: 340px;
+    margin: 0 auto;
+    padding: 45px 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    box-sizing: border-box;
+}
+
+.hero-dongthap .hero-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.hero-dongthap .hero-text h1 {
+    margin: 0 0 18px;
+    color: #176b45;
+    font-size: clamp(28px, 3vw, 44px);
+    font-weight: 800;
+    line-height: 1.25;
+}
+
+.hero-dongthap .hero-text p {
+    max-width: 650px;
+    margin: 0;
+    color: #43594b;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.hero-dongthap .hero-mascot {
+    flex: 0 1 350px;
+    min-width: 0;
+    text-align: center;
+}
+
+.hero-dongthap .hero-mascot img {
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    max-height: 300px;
+    margin: 0 auto;
+    object-fit: contain;
+    border-radius: 16px;
+}
+
+/* =====================================
+   TABLET VÀ MÀN HÌNH NHỎ
+===================================== */
+
+@media (max-width: 1100px) {
+    .navbar-dongthap .nav-container {
+        gap: 14px;
+        padding: 12px 20px;
+    }
+
+    .navbar-dongthap .nav-brand {
+        font-size: 27px;
+    }
+
+    .navbar-dongthap .nav-menu {
+        gap: 2px;
+    }
+
+    .navbar-dongthap .nav-menu > li > a,
+    .navbar-dongthap .nav-menu > li > .menu-button {
+        padding: 9px 8px;
+        font-size: 14px;
+    }
+
+    .navbar-dongthap .search-menu-item {
+        flex-basis: 240px;
+        min-width: 200px;
+    }
+}
+
+/* =====================================
+   ĐIỆN THOẠI
+===================================== */
+
+@media (max-width: 768px) {
+    .navbar-dongthap .nav-container {
+        min-height: 72px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 14px 18px;
+    }
+
+    .navbar-dongthap .nav-brand {
+        font-size: 26px;
+    }
+
+    .navbar-dongthap .nav-toggle {
+        display: block;
+        width: 42px;
+        height: 40px;
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        border-radius: 8px;
+        background: transparent;
+        color: #fff;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .navbar-dongthap .nav-menu {
+        display: none;
+        flex: 0 0 100%;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+        padding-top: 10px;
+    }
+
+    .navbar-dongthap .nav-menu.menu-open {
+        display: flex;
+    }
+
+    .navbar-dongthap .nav-menu > li {
+        width: 100%;
+    }
+
+    .navbar-dongthap .nav-menu > li > a,
+    .navbar-dongthap .nav-menu > li > .menu-button {
+        justify-content: space-between;
+        width: 100%;
+        min-height: 44px;
+        padding: 11px 12px;
+        box-sizing: border-box;
+        font-size: 15px;
+    }
+
+    .navbar-dongthap .search-menu-item {
+        width: 100%;
+        min-width: 0;
+        flex: none;
+        margin: 4px 0 0;
+    }
+
+    .navbar-dongthap .search-box {
+        width: 100%;
+        max-width: none;
+    }
+
+    .hero-dongthap .hero-inner {
+        min-height: auto;
+        flex-direction: column;
+        gap: 24px;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .hero-dongthap .hero-text h1 {
+        font-size: 30px;
+    }
+
+    .hero-dongthap .hero-text p {
+        font-size: 15px;
+    }
+
+    .hero-dongthap .hero-mascot {
+        flex-basis: auto;
+        width: 100%;
+    }
+
+    .hero-dongthap .hero-mascot img {
+        max-width: 280px;
+        max-height: 240px;
+    }
+}
+
+/* ===== MENU ĐỒNG THÁP CÂN ĐỐI ===== */
+
+.navbar-dongthap {
+    width: 100%;
+    background-color: #176b45;
+}
+
+    .navbar-dongthap .nav-container {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 12px 32px;
+        box-sizing: border-box;
+    }
+
+    /* Logo bên trái */
+    .navbar-dongthap .nav-brand {
+        flex-shrink: 0;
+        margin: 0;
+        color: #fff;
+        font-size: 30px;
+        font-weight: 800;
+        white-space: nowrap;
+        text-decoration: none;
+    }
+
+    /* Menu chính */
+    .navbar-dongthap .nav-menu {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        min-width: 0;
+        width: auto;
+        gap: 5px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+        /* Các mục menu */
+        .navbar-dongthap .nav-menu > li {
+            flex-shrink: 0;
+            margin: 0;
+        }
+
+            .navbar-dongthap .nav-menu > li > a,
+            .navbar-dongthap .nav-menu > li > .menu-button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 6px;
+                min-height: 44px;
+                padding: 10px 12px;
+                border: none;
+                border-radius: 7px;
+                background: transparent;
+                color: #fff;
+                font-family: inherit;
+                font-size: 15px;
+                font-weight: 600;
+                text-decoration: none;
+                white-space: nowrap;
+                cursor: pointer;
+            }
+
+                .navbar-dongthap .nav-menu > li > a:hover,
+                .navbar-dongthap .nav-menu > li > .menu-button:hover,
+                .navbar-dongthap .nav-menu > li.submenu-open > .menu-button {
+                    background-color: rgba(255, 255, 255, 0.14);
+                }
+
+       
+/* ===== MÀN HÌNH VỪA ===== */
+
+@media (max-width: 1200px) and (min-width: 769px) {
+    .navbar-dongthap .nav-container {
+        gap: 12px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .navbar-dongthap .nav-brand {
+        font-size: 25px;
+    }
+
+    .navbar-dongthap .nav-menu {
+        gap: 1px;
+    }
+
+        .navbar-dongthap .nav-menu > li > a,
+        .navbar-dongthap .nav-menu > li > .menu-button {
+            padding-right: 7px;
+            padding-left: 7px;
+            font-size: 13px;
+        }
+
+        .navbar-dongthap .nav-menu > .search-menu-item {
+            flex-basis: 230px;
+            min-width: 180px;
+        }
+}
+
+/* ===== ĐIỆN THOẠI ===== */
+
+@media (max-width: 768px) {
+    .navbar-dongthap .nav-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 14px 18px;
+    }
+
+    .navbar-dongthap .nav-brand {
+        font-size: 25px;
+    }
+
+    .navbar-dongthap .nav-toggle {
+        display: block;
+        width: 42px;
+        height: 40px;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        border-radius: 8px;
+        background: transparent;
+        color: #fff;
+        font-size: 23px;
+        cursor: pointer;
+    }
+
+    .navbar-dongthap .nav-menu {
+        display: none;
+        flex: 0 0 100%;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        gap: 4px;
+        padding-top: 10px;
+    }
+
+        .navbar-dongthap .nav-menu.menu-open {
+            display: flex;
+        }
+
+        .navbar-dongthap .nav-menu > li {
+            width: 100%;
+        }
+
+            .navbar-dongthap .nav-menu > li > a,
+            .navbar-dongthap .nav-menu > li > .menu-button {
+                justify-content: space-between;
+                width: 100%;
+                box-sizing: border-box;
+                padding: 11px 12px;
+                font-size: 15px;
+            }
+
+        .navbar-dongthap .nav-menu > .search-menu-item {
+            flex: none;
+            width: 100%;
+            min-width: 0;
+            margin: 8px 0 0;
+        }
+
+    .navbar-dongthap .search-box {
+        width: 100%;
+    }
+}

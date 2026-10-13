@@ -1,0 +1,368 @@
+﻿/* ===== TỔNG THỂ ===== */
+.gopy-page {
+    width: 100%;
+    max-width: 1488px;
+    margin: 0 auto;
+    padding-bottom: 45px;
+    color: #34483a;
+    box-sizing: border-box;
+}
+
+.gopy-page *,
+.gopy-page *::before,
+.gopy-page *::after {
+    box-sizing: border-box;
+}
+
+/* ===== BANNER ===== */
+.gopy-banner {
+    position: relative;
+    width: 100%;
+    height: 370px;
+    overflow: hidden;
+    background: #dcebdc;
+}
+
+.gopy-banner-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.gopy-banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient( 90deg, rgba(10, 53, 34, 0.78), rgba(10, 53, 34, 0.38), rgba(10, 53, 34, 0.05) );
+}
+
+.gopy-banner-content {
+    position: absolute;
+    top: 50%;
+    left: 7%;
+    z-index: 1;
+    width: 78%;
+    max-width: 800px;
+    transform: translateY(-50%);
+    color: #fff;
+}
+
+.gopy-eyebrow,
+.gopy-section-label {
+    display: block;
+    margin-bottom: 12px;
+    color: #e1b84e;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.gopy-banner-content h1 {
+    margin: 0 0 15px;
+    color: #fff;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.gopy-banner-content p {
+    max-width: 620px;
+    margin: 0;
+    color: #fff;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+/* ===== GIỚI THIỆU ===== */
+.gopy-intro {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 40px;
+    padding: 50px 6%;
+}
+
+.gopy-section-label {
+    color: #4d8b65;
+}
+
+.gopy-intro-text h2 {
+    margin: 0 0 17px;
+    color: #176b45;
+    font-size: 29px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.gopy-intro-text p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.gopy-intro-image {
+    height: 300px;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #e7eee6;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+}
+
+    .gopy-intro-image img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+/* ===== BIỂU MẪU ===== */
+.gopy-form-section {
+    max-width: 900px;
+    margin: 0 auto 45px;
+    padding: 35px 40px;
+    background: #f5f8f4;
+    border: 1px solid #e0e8e0;
+    border-radius: 14px;
+}
+
+.gopy-form-heading {
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+    .gopy-form-heading h2 {
+        margin: 0 0 10px;
+        color: #176b45;
+        font-size: 29px;
+        font-weight: 700;
+    }
+
+    .gopy-form-heading p {
+        margin: 0;
+        line-height: 1.7;
+    }
+
+.gopy-field {
+    margin-bottom: 21px;
+}
+
+    .gopy-field label {
+        display: block;
+        margin-bottom: 8px;
+        color: #284c36;
+        font-size: 15px;
+        font-weight: 700;
+    }
+
+.gopy-input {
+    display: block;
+    width: 100%;
+    max-width: none;
+    min-height: 45px;
+    padding: 11px 13px;
+    color: #34483a;
+    background: #fff;
+    border: 1px solid #ccd8ce;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+    .gopy-input:focus {
+        border-color: #176b45;
+        outline: 2px solid rgba(23, 107, 69, 0.12);
+    }
+
+.gopy-textarea {
+    min-height: 155px;
+    resize: vertical;
+}
+
+.gopy-error {
+    display: block;
+    margin-top: 7px;
+    color: #b42318;
+    font-size: 13px;
+}
+
+.gopy-submit {
+    display: inline-block;
+    min-width: 150px;
+    padding: 13px 24px;
+    color: #fff;
+    background: #176b45;
+    border: 0;
+    border-radius: 7px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+    .gopy-submit:hover {
+        background: #145638;
+    }
+
+.gopy-message {
+    display: block;
+    margin-top: 18px;
+    color: #176b45;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* ===== CẢM ƠN ===== */
+.gopy-thanks {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 280px;
+    margin: 0 5%;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #176b45;
+}
+
+    .gopy-thanks > img {
+        position: absolute;
+        inset: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .gopy-thanks::after {
+        position: absolute;
+        inset: 0;
+        background: rgba(10, 53, 34, 0.72);
+        content: "";
+    }
+
+.gopy-thanks-content {
+    position: relative;
+    z-index: 1;
+    max-width: 750px;
+    padding: 35px 25px;
+    text-align: center;
+    color: #fff;
+}
+
+    .gopy-thanks-content h2 {
+        margin: 0 0 14px;
+        color: #fff;
+        font-size: 29px;
+        font-weight: 700;
+    }
+
+    .gopy-thanks-content p {
+        margin: 0 0 22px;
+        color: #fff;
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+.gopy-home-link {
+    display: inline-block;
+    padding: 11px 22px;
+    color: #176b45 !important;
+    background: #fff;
+    border-radius: 6px;
+    font-weight: 700;
+    text-decoration: none !important;
+}
+
+    .gopy-home-link:hover {
+        background: #f5df91;
+    }
+
+/* ===== MÁY TÍNH BẢNG ===== */
+@media (max-width: 900px) {
+    .gopy-banner {
+        height: 320px;
+    }
+
+    .gopy-banner-content h1 {
+        font-size: 35px;
+    }
+
+    .gopy-intro {
+        gap: 25px;
+        padding: 35px 4%;
+    }
+
+    .gopy-intro-image {
+        height: 250px;
+    }
+
+    .gopy-form-section {
+        margin-right: 20px;
+        margin-left: 20px;
+        padding: 30px;
+    }
+}
+
+/* ===== ĐIỆN THOẠI ===== */
+@media (max-width: 600px) {
+    .gopy-banner {
+        height: 290px;
+    }
+
+    .gopy-banner-content {
+        left: 6%;
+        width: 88%;
+    }
+
+        .gopy-banner-content h1 {
+            font-size: 28px;
+        }
+
+        .gopy-banner-content p {
+            font-size: 15px;
+        }
+
+    .gopy-eyebrow {
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+
+    .gopy-intro {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        padding: 30px 20px;
+    }
+
+    .gopy-intro-text h2 {
+        font-size: 25px;
+    }
+
+    .gopy-intro-image {
+        height: 230px;
+    }
+
+    .gopy-form-section {
+        margin: 0 15px 30px;
+        padding: 25px 18px;
+    }
+
+    .gopy-form-heading h2 {
+        font-size: 25px;
+    }
+
+    .gopy-submit {
+        width: 100%;
+    }
+
+    .gopy-thanks {
+        min-height: 300px;
+        margin: 0 15px;
+    }
+
+    .gopy-thanks-content h2 {
+        font-size: 24px;
+    }
+}

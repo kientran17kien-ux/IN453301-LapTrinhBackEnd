@@ -1,0 +1,485 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true"
+    CodeBehind="Site.Master.cs" Inherits="BBC.SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="vi">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title><%: Page.Title %> - Đồng Tháp Đất Sen Hồng</title>
+
+    <link href="<%= ResolveUrl("~/Content/bootstrap.css") %>" rel="stylesheet" />
+    <link href="<%= ResolveUrl("~/Content/Site.css") %>" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+
+    <style>
+        /* ===== THANH MENU ===== */
+        .navbar-dongthap .nav-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-dongthap .nav-menu {
+            display: flex;
+            align-items: center;
+            flex: 1;
+            min-width: 0;
+        }
+
+        /* ===== THANH TÌM KIẾM ===== */
+        .navbar-dongthap .search-menu-item {
+            margin-left: auto;
+            padding-left: 16px;
+            list-style: none;
+            flex-shrink: 0;
+        }
+
+        .navbar-dongthap .search-box {
+            display: flex;
+            align-items: center;
+            width: 300px;
+            height: 40px;
+            margin: 0;
+            padding: 0;
+            border: 1px solid #dce7df;
+            border-radius: 22px;
+            background: #fff;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        .navbar-dongthap .search-box input {
+            flex: 1;
+            min-width: 0;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0 12px;
+            border: none;
+            outline: none;
+            box-shadow: none;
+            background: transparent;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .navbar-dongthap .search-box input:focus {
+            border: none;
+            outline: none;
+            box-shadow: none;
+        }
+
+        .navbar-dongthap .search-box button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 0 0 42px;
+            width: 42px;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            border: none;
+            border-radius: 0;
+            background: #fff;
+            color: #176b45;
+            cursor: pointer;
+            font-size: 17px;
+        }
+
+        .navbar-dongthap .search-box button:hover {
+            background: #eaf4ed;
+        }
+
+        /* ===== MÀN HÌNH VỪA ===== */
+        @media (max-width: 1200px) and (min-width: 769px) {
+            .navbar-dongthap .search-box {
+                width: 210px;
+            }
+
+            .navbar-dongthap .search-menu-item {
+                padding-left: 8px;
+            }
+        }
+
+        /* ===== ĐIỆN THOẠI ===== */
+        @media (max-width: 768px) {
+            .navbar-dongthap .nav-container {
+                flex-wrap: wrap;
+            }
+
+            .navbar-dongthap .nav-menu {
+                display: none;
+                flex: 0 0 100%;
+                flex-direction: column;
+                align-items: stretch;
+                width: 100%;
+            }
+
+            .navbar-dongthap .nav-menu.menu-open {
+                display: flex;
+            }
+
+            .navbar-dongthap .search-menu-item {
+                width: 100%;
+                margin: 8px 0 0;
+                padding: 12px 15px;
+                box-sizing: border-box;
+            }
+
+            .navbar-dongthap .search-box {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<form id="form1" runat="server">
+
+    <!-- ===== HEADER MENU ===== -->
+    <header class="site-header">
+        <nav class="navbar-dongthap">
+            <div class="nav-container">
+
+                <!-- LOGO -->
+                <a class="nav-brand"
+                   href="<%= ResolveUrl("~/Default.aspx") %>">
+                    ĐỒNG THÁP
+                </a>
+
+                <!-- NÚT MENU ĐIỆN THOẠI -->
+                <button type="button"
+                    class="nav-toggle"
+                    id="navToggle"
+                    aria-label="Mở menu"
+                    aria-expanded="false">
+                    ☰
+                </button>
+
+                <!-- DANH SÁCH MENU -->
+                <ul class="nav-menu" id="navMenu">
+
+                    <!-- TRANG CHỦ -->
+                    <li>
+                        <a href="<%= ResolveUrl("~/Default.aspx") %>">
+                            Trang chủ
+                        </a>
+                    </li>
+
+                    <!-- DU LỊCH -->
+                    <li class="has-submenu">
+                        <button type="button"
+                            class="menu-button"
+                            aria-expanded="false">
+                            Du lịch <span class="arrow">▾</span>
+                        </button>
+
+                        <ul class="submenu">
+                            <li class="submenu-heading">
+                                KHÁM PHÁ ĐỒNG THÁP
+                            </li>
+
+                            <li>
+                                <a href="<%= ResolveUrl("~/1DiemDen.aspx") %>">
+                                    Điểm đến nổi bật
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="<%= ResolveUrl("~/1DuLichSinhThai.aspx") %>">
+                                    Du lịch sinh thái
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="<%= ResolveUrl("~/1DiTichVanHoa.aspx") %>">
+                                    Di tích và văn hóa
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="<%= ResolveUrl("~/1LichTrinh.aspx") %>">
+                                    Gợi ý lịch trình
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- ĐẶC SẢN -->
+                    <li class="has-submenu">
+                        <button type="button"
+                            class="menu-button"
+                            aria-expanded="false">
+                            Đặc sản <span class="arrow">▾</span>
+                        </button>
+
+                        <ul class="submenu">
+                            <li class="submenu-heading">
+                                HƯƠNG VỊ ĐẤT SEN HỒNG
+                            </li>
+
+                            <li>
+                                <a href="<%= ResolveUrl("~/2DacSanNoiTieng.aspx") %>">
+                                    Đặc sản nổi tiếng
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="<%= ResolveUrl("~/2AmThucDiaPhuong.aspx") %>">
+                                    Ẩm thực địa phương
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="<%= ResolveUrl("~/2SanPhamTuSen.aspx") %>">
+                                    Sản phẩm từ sen
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="<%= ResolveUrl("~/2QuaTangLuuNiem.aspx") %>">
+                                    Quà tặng và lưu niệm
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- TIN TỨC -->
+                    <li class="has-submenu">
+                        <button type="button"
+                            class="menu-button"
+                            aria-expanded="false">
+                            Tin tức <span class="arrow">▾</span>
+                        </button>
+
+                        <ul class="submenu">
+                            <li class="submenu-heading">
+                                TIN TỨC &amp; SỰ KIỆN
+                            </li>
+
+                            <li>
+                                <a href="<%= ResolveUrl("~/3TinDuLich.aspx") %>">
+                                    Tin du lịch
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="<%= ResolveUrl("~/3LeHoiDiaPhuong.aspx") %>">
+                                    Lễ hội địa phương
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="<%= ResolveUrl("~/3SuKienNoiBat.aspx") %>">
+                                    Sự kiện nổi bật
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- LIÊN HỆ -->
+                    <li class="has-submenu">
+                        <button type="button"
+                            class="menu-button"
+                            aria-expanded="false">
+                            Liên hệ <span class="arrow">▾</span>
+                        </button>
+
+                        <ul class="submenu submenu-right">
+                            <li class="submenu-heading">
+                                KẾT NỐI VỚI CHÚNG TÔI
+                            </li>
+
+                            <li>
+                                <a href="<%= ResolveUrl("~/4LienHe.aspx") %>">
+                                    Thông tin liên hệ
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="<%= ResolveUrl("~/4GopY.aspx") %>">
+                                    Gửi góp ý
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- TÌM KIẾM: KHÔNG LỒNG THẺ FORM -->
+                    <li class="search-menu-item">
+                        <div class="search-box">
+                            <input type="search"
+                                id="txtTimKiem"
+                                placeholder="Tìm kiếm..."
+                                aria-label="Nhập từ khóa tìm kiếm" />
+
+                            <button type="button"
+                                id="btnTimKiem"
+                                aria-label="Tìm kiếm">
+                                🔍
+                            </button>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ===== BANNER GIỚI THIỆU ===== -->
+    <section class="hero-dongthap">
+        <div class="hero-inner">
+
+            <div class="hero-text">
+                <h1>ĐỒNG THÁP - ĐẤT SEN HỒNG</h1>
+                <p>
+                    Khám phá vẻ đẹp thiên nhiên, văn hóa đặc sắc
+                    và con người thân thiện của Đồng Tháp.
+                </p>
+            </div>
+
+            <div class="hero-mascot">
+                <img src="<%= ResolveUrl("~/images/besen.jpg") %>"
+                    alt="Bé Sen - Đồng Tháp"
+                    onerror="this.style.display='none';" />
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== NỘI DUNG TỪNG TRANG ===== -->
+    <main class="page-content">
+        <asp:ContentPlaceHolder
+            ID="MainContent"
+            runat="server" />
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer-dongthap">
+        <p>
+            © Đồng Tháp - Đất Sen Hồng |
+            Khám phá và trải nghiệm
+        </p>
+    </footer>
+
+</form>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+(function () {
+    var navToggle = document.getElementById("navToggle");
+    var navMenu = document.getElementById("navMenu");
+
+    var menuItems = document.querySelectorAll(
+        ".has-submenu > .menu-button"
+    );
+
+    // Mở hoặc đóng menu trên điện thoại
+    if (navToggle && navMenu) {
+        navToggle.addEventListener("click", function () {
+            var opened = navMenu.classList.toggle("menu-open");
+
+            navToggle.setAttribute(
+                "aria-expanded",
+                opened ? "true" : "false"
+            );
+        });
+    }
+
+    // Mở và đóng các menu con
+    menuItems.forEach(function (button) {
+        button.addEventListener("click", function (event) {
+            event.stopPropagation();
+
+            var parent = button.parentElement;
+            var shouldOpen =
+                !parent.classList.contains("submenu-open");
+
+            document.querySelectorAll(".has-submenu").forEach(
+                function (item) {
+                    item.classList.remove("submenu-open");
+
+                    var trigger = item.querySelector(
+                        ":scope > .menu-button"
+                    );
+
+                    if (trigger) {
+                        trigger.setAttribute(
+                            "aria-expanded",
+                            "false"
+                        );
+                    }
+                }
+            );
+
+            if (shouldOpen) {
+                parent.classList.add("submenu-open");
+
+                button.setAttribute(
+                    "aria-expanded",
+                    "true"
+                );
+            }
+        });
+    });
+
+    // Đóng menu con khi nhấn ra ngoài
+    document.addEventListener("click", function (event) {
+        if (!event.target.closest(".nav-menu")) {
+            document.querySelectorAll(".has-submenu").forEach(
+                function (item) {
+                    item.classList.remove("submenu-open");
+
+                    var button = item.querySelector(
+                        ":scope > .menu-button"
+                    );
+
+                    if (button) {
+                        button.setAttribute(
+                            "aria-expanded",
+                            "false"
+                        );
+                    }
+                }
+            );
+        }
+    });
+
+    // ===== XỬ LÝ TÌM KIẾM =====
+    var inputTimKiem = document.getElementById("txtTimKiem");
+    var btnTimKiem = document.getElementById("btnTimKiem");
+
+    function thucHienTimKiem() {
+        if (!inputTimKiem) return;
+
+        var tuKhoa = inputTimKiem.value.trim();
+
+        if (tuKhoa !== "") {
+            var trangTimKiem =
+                '<%= ResolveUrl("~/TimKiem.aspx") %>';
+
+            window.location.href =
+                trangTimKiem + "?q=" + encodeURIComponent(tuKhoa);
+        } else {
+            inputTimKiem.focus();
+        }
+    }
+
+    if (btnTimKiem) {
+        btnTimKiem.addEventListener("click", thucHienTimKiem);
+    }
+
+    if (inputTimKiem) {
+        inputTimKiem.addEventListener("keydown", function (event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                thucHienTimKiem();
+            }
+        });
+    }
+})();
+</script>
+
+</body>
+</html>

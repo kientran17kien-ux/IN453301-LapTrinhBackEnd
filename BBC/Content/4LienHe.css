@@ -1,0 +1,361 @@
+﻿/* ===== TRANG LIÊN HỆ ===== */
+.lienhe-page {
+    width: 100%;
+    max-width: 1488px;
+    margin: 0 auto;
+    padding: 0 0 45px;
+    color: #34483a;
+    box-sizing: border-box;
+}
+
+.lienhe-page *,
+.lienhe-page *::before,
+.lienhe-page *::after {
+    box-sizing: border-box;
+}
+
+/* ===== BANNER ===== */
+.lienhe-banner {
+    position: relative;
+    width: 100%;
+    height: 390px;
+    overflow: hidden;
+    background: #dcebdc;
+}
+
+.lienhe-banner-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.lienhe-banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient( 90deg, rgba(10, 53, 34, 0.78), rgba(10, 53, 34, 0.35), rgba(10, 53, 34, 0.05) );
+}
+
+.lienhe-banner-content {
+    position: absolute;
+    top: 50%;
+    left: 7%;
+    z-index: 1;
+    width: 75%;
+    max-width: 800px;
+    transform: translateY(-50%);
+    color: #fff;
+}
+
+.lienhe-label {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: #f5df91;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.lienhe-banner-content h1 {
+    margin: 0 0 18px;
+    color: #fff;
+    font-size: 43px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.lienhe-banner-content p {
+    max-width: 620px;
+    margin: 0;
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* ===== GIỚI THIỆU ===== */
+.lienhe-intro {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 45px 25px 30px;
+    text-align: center;
+}
+
+    .lienhe-intro h2,
+    .lienhe-section-heading h2 {
+        margin: 0 0 16px;
+        color: #176b45;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 1.4;
+    }
+
+    .lienhe-intro p {
+        margin: 0;
+        font-size: 16px;
+        line-height: 1.9;
+    }
+
+/* ===== THẺ THÔNG TIN ===== */
+.lienhe-info {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    padding: 15px 5% 40px;
+}
+
+.lienhe-info-card {
+    min-width: 0;
+    padding: 27px 20px;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #e0e8e0;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+    .lienhe-info-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.09);
+    }
+
+.lienhe-icon {
+    margin-bottom: 12px;
+    font-size: 34px;
+}
+
+.lienhe-info-card h3 {
+    margin: 0 0 12px;
+    color: #176b45;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.lienhe-info-card p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* ===== HÌNH ẢNH ===== */
+.lienhe-destinations {
+    padding: 25px 5% 45px;
+    background: #f5f8f4;
+}
+
+.lienhe-section-heading {
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+    .lienhe-section-heading > span {
+        display: block;
+        margin-bottom: 10px;
+        color: #4d8b65;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
+
+    .lienhe-section-heading p {
+        margin: 0;
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+.lienhe-image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.lienhe-image-card {
+    min-width: 0;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #e0e8e0;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+}
+
+.lienhe-image-wrap {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    background: #e7eee6;
+}
+
+    .lienhe-image-wrap img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        transition: transform 0.35s ease;
+    }
+
+.lienhe-image-card:hover .lienhe-image-wrap img {
+    transform: scale(1.04);
+}
+
+.lienhe-image-caption {
+    padding: 20px 22px 23px;
+}
+
+    .lienhe-image-caption h3 {
+        margin: 0 0 10px;
+        color: #176b45;
+        font-size: 22px;
+        font-weight: 700;
+    }
+
+    .lienhe-image-caption p {
+        margin: 0;
+        color: #526156;
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+/* ===== KÊU GỌI GỬI GÓP Ý ===== */
+.lienhe-cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    margin: 35px 5% 0;
+    padding: 30px;
+    background: #eaf4eb;
+    border: 1px solid #dbeadd;
+    border-radius: 12px;
+}
+
+    .lienhe-cta h2 {
+        margin: 0 0 10px;
+        color: #176b45;
+        font-size: 23px;
+        font-weight: 700;
+        line-height: 1.4;
+    }
+
+    .lienhe-cta p {
+        margin: 0;
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+.lienhe-cta-button {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 13px 22px;
+    color: #fff !important;
+    background: #176b45;
+    border-radius: 7px;
+    font-weight: 700;
+    text-decoration: none !important;
+    transition: background 0.2s ease;
+}
+
+    .lienhe-cta-button:hover {
+        color: #fff !important;
+        background: #145638;
+    }
+
+    .lienhe-cta-button span {
+        font-size: 20px;
+    }
+
+/* ===== MÀN HÌNH VỪA ===== */
+@media (max-width: 900px) {
+    .lienhe-banner {
+        height: 330px;
+    }
+
+    .lienhe-banner-content h1 {
+        font-size: 35px;
+    }
+
+    .lienhe-info {
+        gap: 15px;
+        padding-right: 3%;
+        padding-left: 3%;
+    }
+
+    .lienhe-info-card {
+        padding: 23px 14px;
+    }
+
+    .lienhe-image-wrap {
+        height: 230px;
+    }
+}
+
+/* ===== ĐIỆN THOẠI ===== */
+@media (max-width: 600px) {
+    .lienhe-banner {
+        height: 300px;
+    }
+
+    .lienhe-banner-content {
+        left: 6%;
+        width: 88%;
+    }
+
+        .lienhe-banner-content h1 {
+            font-size: 29px;
+        }
+
+        .lienhe-banner-content p {
+            font-size: 15px;
+        }
+
+    .lienhe-label {
+        font-size: 11px;
+        letter-spacing: 1px;
+    }
+
+    .lienhe-intro {
+        padding: 32px 20px 20px;
+    }
+
+        .lienhe-intro h2,
+        .lienhe-section-heading h2 {
+            font-size: 25px;
+        }
+
+    .lienhe-info {
+        grid-template-columns: 1fr;
+        padding: 15px 20px 30px;
+    }
+
+    .lienhe-destinations {
+        padding: 28px 20px 30px;
+    }
+
+    .lienhe-image-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .lienhe-image-wrap {
+        height: 240px;
+    }
+
+    .lienhe-cta {
+        align-items: stretch;
+        flex-direction: column;
+        margin: 25px 20px 0;
+        padding: 23px 20px;
+    }
+
+        .lienhe-cta h2 {
+            font-size: 21px;
+        }
+
+    .lienhe-cta-button {
+        align-self: flex-start;
+    }
+}
